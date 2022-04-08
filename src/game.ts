@@ -1253,8 +1253,195 @@ link03.setParent(state01_3)
                   rotation: Quaternion.Euler(0, 0, 0)
               }))
 
+              //Material 06
+              const material001 = new Material()
+                    material001.metallic = 0
+                    material001.roughness = .5
+
+              class ColorSystem {
+                  fraction:number = 0
+
+                  update(dt:number){
+                      this.fraction += dt * 0.01
+                      if(this.fraction > 1){
+                          this.fraction = 0
+                      }
+                      material001.albedoColor = Color4.Lerp(new Color4(1, 1, 1.5, .75), new Color4(0, 0, 1.5, 0), this.fraction)
+                  }
+              }
+              engine.addSystem(new ColorSystem())
+
+
+              //Objects
+
+              //Material Host 01
+              const obj01 = new Entity()
+              obj01.addComponent(new BoxShape())
+              obj01.addComponent(material001)
+              obj01.addComponent(new Transform({
+                  position: new Vector3(24, 3, 8),
+                  scale: new Vector3(4, 8, 4),
+                  rotation: Quaternion.Euler(0, 0, 0)
+                }))
+
+              //Material Host 02
+              const obj02 = new Entity()
+              obj02.addComponent(new BoxShape())
+              obj02.addComponent(material001)
+              obj02.addComponent(new Transform({
+                  position: new Vector3(24, 3, 24),
+                  scale: new Vector3(4, 8, 4),
+                  rotation: Quaternion.Euler(0, 0, 0)
+                }))
+
+              //Material Host 03
+              const obj03 = new Entity()
+              obj03.addComponent(new BoxShape())
+              obj03.addComponent(material001)
+              obj03.addComponent(new Transform({
+                  position: new Vector3(24, 3, 40),
+                  scale: new Vector3(4, 8, 4),
+                  rotation: Quaternion.Euler(0, 0, 0)
+                }))
+
+              //Material Host 04
+              const obj04 = new Entity()
+              obj04.addComponent(new BoxShape())
+              obj04.addComponent(material001)
+              obj04.addComponent(new Transform({
+                  position: new Vector3(40, 3, 8),
+                  scale: new Vector3(4, 8, 4),
+                  rotation: Quaternion.Euler(0, 0, 0)
+                }))
+
+              //Material Host 05
+              const obj05 = new Entity()
+              obj05.addComponent(new BoxShape())
+              obj05.addComponent(material001)
+              obj05.addComponent(new Transform({
+                  position: new Vector3(40, 3, 24),
+                  scale: new Vector3(4, 8, 4),
+                  rotation: Quaternion.Euler(0, 0, 0)
+                }))
+
+              //Material Host 06
+              const obj06 = new Entity()
+              obj06.addComponent(new BoxShape())
+              obj06.addComponent(material001)
+              obj06.addComponent(new Transform({
+                  position: new Vector3(40, 3, 40),
+                  scale: new Vector3(4, 8, 4),
+                  rotation: Quaternion.Euler(0, 0, 0)
+                }))
+
+              //Material Host 07
+              const obj07 = new Entity()
+              obj07.addComponent(new BoxShape())
+              obj07.addComponent(material001)
+              obj07.addComponent(new Transform({
+                  position: new Vector3(56, 3, 8),
+                  scale: new Vector3(4, 8, 4),
+                  rotation: Quaternion.Euler(0, 0, 0)
+                }))
+
+              //Material Host 08
+              const obj08 = new Entity()
+              obj08.addComponent(new BoxShape())
+              obj08.addComponent(material001)
+              obj08.addComponent(new Transform({
+                  position: new Vector3(56, 3, 24),
+                  scale: new Vector3(4, 8, 4),
+                  rotation: Quaternion.Euler(0, 0, 0)
+                }))
+
+              //Material Host 09
+              const obj09 = new Entity()
+              obj09.addComponent(new BoxShape())
+              obj09.addComponent(material001)
+              obj09.addComponent(new Transform({
+                  position: new Vector3(56, 3, 40),
+                  scale: new Vector3(4, 8, 4),
+                  rotation: Quaternion.Euler(0, 0, 0)
+                }))
+
+              //Material Host 10
+              const obj10 = new Entity()
+              obj10.addComponent(new BoxShape())
+              obj10.addComponent(material001)
+              obj10.addComponent(new Transform({
+                  position: new Vector3(72, 3, 8),
+                  scale: new Vector3(4, 8, 4),
+                  rotation: Quaternion.Euler(0, 0, 0)
+                }))
+
+              //Material Host 11
+              const obj11 = new Entity()
+              obj11.addComponent(new BoxShape())
+              obj11.addComponent(material001)
+              obj11.addComponent(new Transform({
+                  position: new Vector3(72, 3, 24),
+                  scale: new Vector3(4, 8, 4),
+                  rotation: Quaternion.Euler(0, 0, 0)
+                }))
+
+              //Material Host 12
+              const obj12 = new Entity()
+              obj12.addComponent(new BoxShape())
+              obj12.addComponent(material001)
+              obj12.addComponent(new Transform({
+                  position: new Vector3(72, 3, 40),
+                  scale: new Vector3(4, 8, 4),
+                  rotation: Quaternion.Euler(0, 0, 0)
+                }))
+
+              //Material Host 13
+              const obj13 = new Entity()
+              obj13.addComponent(new BoxShape())
+              obj13.addComponent(material001)
+              obj13.addComponent(new Transform({
+                  position: new Vector3(88, 3, 8),
+                  scale: new Vector3(4, 8, 4),
+                  rotation: Quaternion.Euler(0, 0, 0)
+                }))
+
+              //Material Host 14
+              const obj14 = new Entity()
+              obj14.addComponent(new BoxShape())
+              obj14.addComponent(material001)
+              obj14.addComponent(new Transform({
+                  position: new Vector3(88, 3, 24),
+                  scale: new Vector3(4, 8, 4),
+                  rotation: Quaternion.Euler(0, 0, 0)
+                }))
+
+              //Material Host 15
+              const obj15 = new Entity()
+              obj15.addComponent(new BoxShape())
+              obj15.addComponent(material001)
+              obj15.addComponent(new Transform({
+                  position: new Vector3(88, 3, 40),
+                  scale: new Vector3(4, 8, 4),
+                  rotation: Quaternion.Euler(0, 0, 0)
+                }))
+
+
   //set parent
   content02_2.setParent(state02_2)
+  obj01.setParent(state02_2)
+  obj02.setParent(state02_2)
+  obj03.setParent(state02_2)
+  obj04.setParent(state02_2)
+  obj05.setParent(state02_2)
+  obj06.setParent(state02_2)
+  obj07.setParent(state02_2)
+  obj08.setParent(state02_2)
+  obj09.setParent(state02_2)
+  obj10.setParent(state02_2)
+  obj11.setParent(state02_2)
+  obj12.setParent(state02_2)
+  obj13.setParent(state02_2)
+  obj14.setParent(state02_2)
+  obj15.setParent(state02_2)
 
 
   //State 02_3
