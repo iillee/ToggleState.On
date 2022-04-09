@@ -1262,11 +1262,11 @@ link03.setParent(state01_3)
                   fraction:number = 0
 
                   update(dt:number){
-                      this.fraction += dt * 0.01
+                      this.fraction += dt * 0.075
                       if(this.fraction > 1){
                           this.fraction = 0
                       }
-                      material001.albedoColor = Color4.Lerp(new Color4(1, 1, 1.5, .75), new Color4(0, 0, 1.5, 0), this.fraction)
+                      material001.albedoColor = Color4.Lerp(new Color4(0, 0, 1.5, .75), new Color4(0, 0, 1.5, 0), this.fraction)
                   }
               }
               engine.addSystem(new ColorSystem())
